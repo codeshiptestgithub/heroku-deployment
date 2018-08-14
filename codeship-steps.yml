@@ -34,6 +34,9 @@
       image_name: registry.heroku.com/codeship-container-deploy-test/web
       registry: registry.heroku.com
       dockercfg_service: dockercfg_generator
+    - name: Test Release
+      service: heroku
+      command: heroku container:release web
 - name: Deploy (to Docker Hub)
   type: serial
   steps:
