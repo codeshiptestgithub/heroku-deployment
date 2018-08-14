@@ -36,7 +36,7 @@
       dockercfg_service: dockercfg_generator
     - name: Test Release
       service: heroku
-      command: heroku container:release web
+      command: heroku container:release --app web
 - name: Deploy (to Docker Hub)
   type: serial
   steps:
